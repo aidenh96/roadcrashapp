@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net
+    Modified By Aiden Hussein
+-->
+<html>
+	<head>
+		<title>Road Crashes Victoria | Data Infomation</title>
+		<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico?v=2" />
+		
+        <!-- Meta -->
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/static/js/ie/html5shiv.js"></script><![endif]-->
+		
+        <!-- CSS Styles -->
+        <link rel="stylesheet" href="/static/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="/static/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/static/css/ie8.css" /><![endif]-->
+        
+        <!-- CSS Page Style Overwrites -->
+        <style type="text/css">
+            .page-link {
+                color: #ffc654;
+                border-bottom: 1px dotted #ffc654;
+                font-weight: bold;
+            }
+            a.page-link:hover{
+                color: #3f3f3f !important;
+                border-bottom: 1px dotted #3f3f3f;
+            }
+        </style>
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="/">Road Crashes Victoria</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+							    <li><a href="/">Home</a></li>
+								<li><a href="data">Data</a></li>
+								<li><a href="pivotselect">Pivot Table</a></li>
+								<li><a href="charts">Observations</a></li>
+                                <li><a href="mapselect">Map</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Data</h2>
+								<p>The raw VicRoads Crash Dataset for 2010-2015</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<section>
+										<h3 class="major">The Dataset</h3>
+                                        <p>All the data used in throughout this webapp was acquired from <a class="page-link" href="http://vicroadsopendata.vicroadsmaps.opendata.arcgis.com/">VicRoads</a>. The original dataset contained 65 attributes, which after pre-processing steps involving feature selection, was reduced down to 44 attributes for analysis.</p>
+                                        <p>The attributes that are used for analysis are summarised in the table below.</p>
+                                        <table>
+                                           <tr class='header'>
+                                              <td>Attribute</td>
+                                              <td>Description</td>
+                                           <tr>
+                                           <tr>
+                                              <td><b>ACCIDENT_DATE</b></td>
+                                              <td>The date the crash occured</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>ACCIDENT_TIME</b></td>
+                                              <td>The time the crash occured at</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>ALCOHOLTIME</b></td>
+                                              <td>If the time when the crash occured at is known to be a common time when people drink</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>ACCIDENT_TYPE</b></td>
+                                              <td>The type of crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>DCA_CODE</b></td>
+                                              <td>A description of the crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>HIT_RUN_FLAG</b></td>
+                                              <td>If the crash was a hit and run</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>LIGHT_CONDITION</b></td>
+                                              <td>The visibility on the road, if it was lit or if it was dark</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>POLICE_ATTEND</b></td>
+                                              <td>If police attended the crash scene or not</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>ROAD_GEOMETRY</b></td>
+                                              <td>If the crash occured at at intersection and the type of that intersection</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>SEVERITY</b></td>
+                                              <td>If the crash causes injury, serious injury or fatality</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>SPEED_ZONE</b></td>
+                                              <td>Speed zone the crash occured in</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>LONGITUDE</b></td>
+                                              <td>Longitude coordinate of the crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>LATITUDE</b></td>
+                                              <td>Latitude coordinate of the crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>LGA_NAME</b></td>
+                                              <td>The name of the local government area the crash occured in</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>REGION_NAME</b></td>
+                                              <td>The region the crash occured in</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>TOTAL_PERSONS</b></td>
+                                              <td>Amount of people involved in the crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>INJ_OR_FATAL</b></td>
+                                              <td>If the crash caused any injuries or fatalities</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>FATALITY</b></td>
+                                              <td>The number of fatalities the caused caused</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>SERIOUSINJURY</b></td>
+                                              <td>The number of serious injuries the crash caused</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>OTHERINJURY</b></td>
+                                              <td>The number of other types of injruy the crash caused</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>NONINJURED</b></td>
+                                              <td>The number of non-injured people in the crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>MALES</b></td>
+                                              <td>Amount of males involved in the crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>FEMALES</b></td>
+                                              <td>Amount of people female in the crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>BICYCLIST</b></td>
+                                              <td>Amount of bicyclists involved in the crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>PASSENGER</b></td>
+                                              <td>Amount of passengers involved in the crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>DRIVER</b></td>
+                                              <td>Amount of drivers involved in the crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>PEDESTRIAN</b></td>
+                                              <td>Amount of pedestrians involved in the crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>PILLION</b></td>
+                                              <td>If the car crashed into a pillion</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>MOTORIST</b></td>
+                                              <td>If the car crashed into another motorist</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>UNKNOWN</b></td>
+                                              <td>Unknown reason for car crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>PED_CYCLIST_5_12</b></td>
+                                              <td>If the pedestrians/cyclists involved were between 5 - 12 years in age</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>PED_CYCLIST_13_18</b></td>
+                                              <td>If the pedestrians/cyclists involved were between 13 - 18 years in age</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>OLD_PEDESTRIAN</b></td>
+                                              <td>If the pedestrian involved was old</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>OLD_DRIVER</b></td>
+                                              <td>If the driver was old</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>YOUNG_DRIVER</b></td>
+                                              <td>If the driver was young</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>ALCOHOL_RELATED</b></td>
+                                              <td>If the crash was alcohol releated</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>UNLICENCSED</b></td>
+                                              <td>If the vehicle in the crash was unlicensed</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>NO_OF_VEHICLES</b></td>
+                                              <td>Amount of vehicles involved in the crash</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>HEAVYVEHICLE</b></td>
+                                              <td>If the vehicle involved in the crash was a heavy vehical like a truck</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>PASSENGERVEHICLE</b></td>
+                                              <td>If the vehicle involved in the crash was a passenger vehicle</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>MOTORCYCLE</b></td>
+                                              <td>If there was a motor cycle invloved</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>PUBLICVEHICLE</b></td>
+                                              <td>If the vehicle was a public vehicle, i.e. bus</td>
+                                           </tr>
+                                           <tr>
+                                              <td><b>DEG_URBAN_NAME</b></td>
+                                              <td>The type of area that the crash was located in</td>
+                                           </tr>
+                                        </table>
+                                    </section>
+                                    <hr />
+                                    <section>
+                                        <h3>What Can You Do With This Data</h3>
+                                        <p>There are several functions available for you to use to explore and analyse this data. Click and a box below to try each feature.</p>
+                                        <div class="row uniform">
+                                            <div class="12u$">
+                                        <div class="12u$">
+                                            <a href="/pivotselect" class="button fit special icon fa-table">Make a pivot table</a>
+                                        </div>
+                                        <div class="12u$">
+                                            <a href="/mapselect" class="button fit special icon fa-map">Visualise the data in a Map</a>
+                                        </div>
+                                        <div class="12u$">
+                                            <a href="/charts" class="button fit special icon fa-bar-chart">Check out some interactive charts</a>
+                                        </div>   
+                                        </div>   
+                                        </div>
+                                      
+                                    </section>
+                                    
+                                    <hr />
+                                    
+                                    <section>
+                                        <h3>Download The Data</h3>
+                                        <p>The data file can be downloaded as a CSV (Comma seperated value) form the <a class="page-link" href="http://vicroadsopendata.vicroadsmaps.opendata.arcgis.com/">VicRoads</a> website or by clicking the button below.</p>
+                                        <div class="12u$">
+                                            <a href="http://vicroadsopendata.vicroadsmaps.opendata.arcgis.com/datasets/c2a69622ebad42e7baaa8167daa72127_0.csv" class="button fit special icon fa-download">Download VicRoads Dataset (.csv)</a>
+                                        </div>
+                                    
+                                    </section>
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+                            <p><b style="color: #ffffff;">Road Crashes Victoria</b> is an INFO20002 Project</p>
+                            <p>Created by Aiden Hussein, Bun Hagiwara, Nicholas Pitson</p>
+							<ul class="copyright">
+                                <li>University of Melbourne <a href="https://handbook.unimelb.edu.au/view/2016/INFO20002">INFO2002</a> Group Project 2016</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>All data correct at time of publication</li><li><a href="credits">Credits</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/skel.min.js"></script>
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<!--[if lte IE 8]><script src="static/js/ie/respond.min.js"></script><![endif]-->
+			<script src="static/js/main.js"></script>
+	</body>
+</html>

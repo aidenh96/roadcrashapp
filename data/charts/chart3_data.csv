@@ -1,0 +1,7 @@
+light condition,vic,northern,eastern,western
+Dark No Street Lights,277,82,74,121
+Dark Street Lights Off,8,1,2,5
+Dark Street Lights On,223,14,98,111
+Dark Street Lights Unknown,9,0,6,3
+Day,774,206,268,300
+Dusk/Dawn,118,25,41,52

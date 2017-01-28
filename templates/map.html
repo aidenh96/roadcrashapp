@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net
+    Modified By Aiden Hussein
+-->
+<html>
+	<head>
+		<title>Road Crashes Victoria | Map</title>
+        <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico?v=2" />
+		
+        <!-- Meta -->
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/static/js/ie/html5shiv.js"></script><![endif]-->
+		
+        <!-- CSS Styles -->
+        <link rel="stylesheet" href="/static/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="/static/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/static/css/ie8.css" /><![endif]-->
+        
+        <!-- CSS Page Style Overwrites -->
+        <style type="text/css">
+            .map {
+                height: 800px;
+            }
+            #header {
+                padding: 0 6.5em;
+            }
+            @media screen and (max-width: 640px){
+                #header {
+                    padding: 0 2.5em;
+                }
+                .map{
+                    height: 300px;
+                }
+            }
+        </style>
+	</head>
+    
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<nav class="back">
+                        <a href="mapselect">Back</a>
+                        </nav>
+                        <h1><a href="/">Road Crashes Victoria</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+							    <li><a href="/">Home</a></li>
+								<li><a href="data">Data</a></li>
+								<li><a href="pivotselect">Pivot Table</a></li>
+								<li><a href="charts">Observations</a></li>
+                                <li><a href="mapselect">Map</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Victoria LGA Map</h2>
+								<p>Check out the map you generated below</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<section>
+
+                                        <div id="map" class="map"></div>
+                                        
+                                        <p class="info"><span>Zoom in and out using the buttons in the top left corner or by double clicking the map. Click and drag to move the map around!</span></p>
+				
+									</section>
+                                    
+                                    <hr />
+    
+									<section>
+										<h3 class="major">That's An Awesome Map</h3>
+                                        <p>Why not visualise the data a different way?</p>
+                                        <div class="row uniform">
+                                            <div class="12u$">
+                                        <div class="12u$">
+                                            <a href="/pivotselect" class="button fit special icon fa-table">Make a pivot table</a>
+                                        </div>
+                                        <div class="12u$">
+                                            <a href="/mapselect" class="button fit special icon fa-map">Visualise the data in another Map</a>
+                                        </div>
+                                        <div class="12u$">
+                                            <a href="/charts" class="button fit special icon fa-bar-chart">Check out some interactive charts</a>
+                                        </div>   
+                                        </div>   
+                                        </div>
+                                    </section>
+                                    
+                                    <hr />
+                                    
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+                            <p><b style="color: #ffffff;">Road Crashes Victoria</b> is an INFO20002 Project</p>
+                            <p>Created by Aiden Hussein, Bun Hagiwara, Nicholas Pitson</p>
+							<ul class="copyright">
+                                <li>University of Melbourne <a href="https://handbook.unimelb.edu.au/view/2016/INFO20002">INFO2002</a> Group Project 2016</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>All data correct at time of publication</li><li><a href="credits">Credits</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/skel.min.js"></script>
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<!--[if lte IE 8]><script src="static/js/ie/respond.min.js"></script><![endif]-->
+			<script src="static/js/main.js"></script>
+    
+        <!-- HighMaps Functions -->
+            <script src="/static/js/highmaps.js"></script>
+            <script type="text/javascript">{{hm_JS|safe}}</script>
+	</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net
+    Modified By Aiden Hussein
+-->
+<html>
+	<head>
+		<title>Road Crashes Victoria | Home</title>
+        <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico?v=2" />
+		
+        <!-- Meta -->
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/static/js/ie/html5shiv.js"></script><![endif]-->
+		
+        <!-- CSS Styles -->
+        <link rel="stylesheet" href="/static/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="/static/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/static/css/ie8.css" /><![endif]-->
+        
+        <!-- CSS Page Style Overwrites -->
+        <style type="text/css">
+            body {
+                color: #ffffff;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                color: #ffffff;
+            }
+            .wrapper{
+                background-color: #ffc654;
+            }
+            .wrapper:before, .wrapper:after{
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffc654;' /%3E%3C/svg%3E");
+            }
+            .wrapper.trans {
+                background: transparent;
+                padding: 30px 0px;
+            }
+            .wrapper.trans:before, .wrapper.trans:after {
+                background-image: none;
+            }
+        </style>
+	</head>
+    
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Road Crashes Victoria</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="/">Home</a></li>
+								<li><a href="data">Data</a></li>
+								<li><a href="pivotselect">Pivot Table</a></li>
+								<li><a href="charts">Observations</a></li>
+                                <li><a href="mapselect">Map</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-car"></span></div>
+							<h2>Road Crashes Victoria</h2>
+							<p>How do Victoria's road crashes pile up?</p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a href="#" class="image"><img src="/static/images/crash.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class = "major">Crashes, Crashes and More Crashes</h2>
+                                        <p style= "color: #ffffff">There were over 74,000 crashes on Victorian roads between the years of 2010 - 2015. Thats over 12,000 crashes a year!</p>
+										<a href="charts" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a href="#" class="image"><img src="/static/images/table.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Where is All this Data From?</h2>
+										<p>The Victorian road crash data that has been used throughout webapp is sourced directly from the VicRoads Open data website. Of the 65 initial attributes in the dataset, after pre-processing, 44 have been kept for analysis.</p>
+										<a href="data" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three" class="wrapper spotlight style1">
+								<div class="inner">
+									<a href="#" class="image"><img src="/static/images/analysis.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Raw Data Transformed</h2>
+										<p>What can we learn from the VicRoads Crashes Dataset? View our interactive charts to find out. Want more? Then check out the interactive pivot table builder and customisable LGA heatmap, to analyse the data any way you like!</p>
+										<ul class="actions">
+                                            <li><a href="charts" class="special">Charts</a></li>
+                                            <li><a href="pivotselect" class="special">Pivot Table</a></li>
+                                            <li><a href="mapselect" class="special">LGA Map</a></li>
+                                        </ul>
+									</div>
+								</div>
+							</section>
+                        
+                        <section id="five" class="wrapper trans">
+                        </section>
+                        
+						<!-- Four -->
+							<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">Let's Ask Some Questions...</h2>
+									<p>Here are some questions that could only be answered by processing the VicRoads data, then analysing the processed data using graphs, maps and pivot tables. For more details click on a question below.</p>
+									<section class="features">
+										<article>
+											<a href="charts#q1" class="image"><img src="/static/images/total-crashes.jpg" alt="" /></a>
+											<h3 class="major">Total Crashes</h3>
+											<p>How many crashes are actually happening on Victorian roads? How does this amount change as the years progress?</p>
+                                            <a href="charts#q1" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="charts#q2" class="image"><img src="/static/images/drinks.jpg" alt="" /></a>
+											<h3 class="major">Hit and Drunk</h3>
+											<p>Are the majority of hit and runs caused by drunk drivers? If there are more drunk drivers on the roads, will this mean there will be more hit and runs?</p>
+											<a href="charts#q2" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="charts#q3" class="image"><img src="/static/images/light.jpg" alt="" /></a>
+											<h3 class="major">Light So Bright</h3>
+											<p>How does the light conditions on the roads affect the amount of fatalities on the roads? Are there more crashes in the dark?</p>
+											<a href="charts#q3" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="charts#q4" class="image"><img src="/static/images/crash-types.jpg" alt="" /></a>
+											<h3 class="major">Types of Crashes</h3>
+											<p>Which types of crashes are the most common in Victoria? How does this compare across different regions?</p>
+											<a href="charts#q4" class="special">Learn more</a>
+										</article>
+									</section>
+									<ul class="actions">
+										<li><a href="#" class="button">Browse All</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+                            <p><b style="color: #ffffff;">Road Crashes Victoria</b> is an INFO20002 Project</p>
+                            <p>Created by Aiden Hussein, Bun Hagiwara, Nicholas Pitson</p>
+							<ul class="copyright">
+                                <li>University of Melbourne <a href="https://handbook.unimelb.edu.au/view/2016/INFO20002">INFO2002</a> Group Project 2016</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>All data correct at time of publication</li><li><a href="credits">Credits</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/js/skel.min.js"></script>
+			<script src="/static/js/jquery.min.js"></script>
+            <script src="/static/js/jquery.scrollex.min.js"></script>
+			<script src="/static/js/util.js"></script>
+			<!--[if lte IE 8]><script src="/static/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/static/js/main.js"></script>
+
+	</body>
+</html>

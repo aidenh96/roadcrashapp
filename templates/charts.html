@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net
+    Modified By Aiden Hussein
+-->
+<html>
+	<head>
+		<title>Road Crashes Victoria | Observations</title>
+		<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico?v=2" />
+		
+        <!-- Meta -->
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/static/js/ie/html5shiv.js"></script><![endif]-->
+		
+        <!-- CSS Styles -->
+        <link rel="stylesheet" href="/static/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="/static/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/static/css/ie8.css" /><![endif]-->
+        
+        <!-- CSS Page Style Overwrites -->
+        <style type="text/css">
+            .chart {
+                height: 500px;
+            }
+            section:before {
+                display: block; 
+                content: " "; 
+                margin-top: -3.5em; 
+                height: 3.5em; 
+                visibility: hidden; 
+            }
+        </style>
+	</head>
+    
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="/">Road Crashes Victoria</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+							    <li><a href="/">Home</a></li>
+								<li><a href="data">Data</a></li>
+								<li><a href="pivotselect">Pivot Table</a></li>
+								<li><a href="charts">Observations</a></li>
+                                <li><a href="mapselect">Map</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Observations</h2>
+								<p>What does the Victoria Road Crash Dataset tell us?</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<section id="q1">
+										<h3 class="major">Soooo Many Crashes</h3>
+                                        <blockquote>
+                                            How many crashes are actually happening on Victorian roads? How does this amount change as the years progress?
+                                        </blockquote>
+                                        <h4>Hypothesis</h4>
+                                        <p>Crashes are expected to gradually decline as the years progress. This could be due to better car technology and more education and advertising about driving safer on the roads.</p>
+                                        <h4>Results</h4>
+										<p>There were a total of <strong>74,530</strong> crashes in Victoria between the years of 2010-2015. Interestingly, 2010 had the lowest number of car crashes with a sharp increase in crashes the years afterwards. Out of the regions,  Western Victoria shows the most crashes for this time period.</p>
+                                        
+                                        <div id="chart1" class="chart"></div>
+				
+									</section>
+                                    
+                                    <hr />
+
+									<section id="q2">
+										<h3 class="major">Too Drunk to Stop?</h3>
+                                        <blockquote>
+                                           Are the majority of hit and runs caused by drunk drivers? If there are more drunk drivers on the roads, will this mean there will be more hit and runs?
+                                        </blockquote>
+                                        <h4>Hypothesis</h4>
+                                        <p>It seems likely that as the number of drunk drivers increase on the roads, there would be a rise in hit and run incidents. This could be due to the fact that drunk drivers don't have the best sense of judgement, and don't want to be caught for two offences.</p>
+                                        <h4>Results</h4>
+										<p>The number of hit and runs tends to <strong>increase</strong> with the amount of drunk drivers on the roads. Not too surprising. The eastern suburbs represent this correlation the best. There is one outlier in a Western Region LGA, where there was only 68 drunk drivers but 346 hit and run incidents. It seems that sober drivers hit people too...</p>
+									
+                                        <div id="chart2" class="chart"></div>
+                                        <p class="info"><span>Click and drag anywhere on the scatter plot to zoom in on a region!</span></p>
+                                        
+                                    </section>
+                                    
+                                    <hr />
+                                    
+                                    <section id="q3">
+										<h3 class="major">More Deaths During the Day</h3>
+                                          <blockquote>
+                                           How does the light conditions on the roads affect the amount of fatalities on the roads? Are there more crashes in the dark?
+                                        </blockquote>
+                                        <h4>Hypothesis</h4>
+                                        <p>In darker situations and roads where there is little to no light, there should be an increased amount of crashes as it is harder for drivers to see other drivers or things on the road that could cause an accident.</p>
+                                        <h4>Results</h4>
+										<p>Car crashes tended to cause <strong>more</strong> fatalities in lighted environment rather than in the dark, contrary to what was expected. This is true even for crash crashes that happen in the night on lit roads. It is possible that there are more cars driving in lighter environments, therefore it would be more likely for crashes that cause fatalities to occur at these times.</p>
+									
+                                        <div id="chart3" class="chart"></div>
+                                        <p class="info"><span>Click and drag anywhere on the bar chart to zoom in on a region!</span></p>
+                                        
+                                    </section>
+                                    
+                                    <hr />
+                                    
+                                    <section id="q4">
+										<h3 class="major">Sorry About Your Car...</h3>
+                                          <blockquote>
+                                           Which types of crashes are the most common in Victoria? How does this compare across different regions?
+                                        </blockquote>
+                                        <h4>Hypothesis</h4>
+                                        <p>Crashes with other cars on the road should tend to be the most common type of crash. This is probably due to there being so many cars on the road, that the easiest thing to hit would be a car.</p>
+                                        <h4>Results</h4>
+										<p>The <b>most common</b> type of crash, across all regions of Victoria is a collision with another vehicle. The Western region has the greatest percentage of crashes falling into this category, at 65.2%. Interestingly, northern Victoria has a much lower percentage of crashes that are collisions into another car, and instead crashes with a fixed object makes up a large portion of total crash types.</p>
+									
+                                        <div id="chart4" class="chart"></div>
+                                        <p class="info"><span>View specific crash types by clicking them on and off in the legend</span></p>
+                                        
+                                    </section>
+                                    
+                                    <hr />
+                                    
+                                    <section id="q5">
+										<h3 class="major">Tick Tock</h3>
+                                          <blockquote>
+                                           Which times of day do most car crashes occur? What are the factors that determine which time of day are more prone to car crashes?
+                                        </blockquote>
+                                        <h4>Hypothesis</h4>
+                                        <p>During peak hours of travel, that amount of car crashes on the roads should spike. This is down the fact that there will be more cars on the roads, and therefore more car crashes.</p>
+                                        <h4>Results</h4>
+										<p>As expected, most car crashes occur during the daytime hours. There is an obvious increase in crashes at around 8:00am and again between 3:00pm - 5:00 pm, most likely as these are peak hours on the road, meaning there would be more cars on the roads at these times. All regions follow this tread pretty closely.</p>
+									
+                                        <div id="chart5" class="chart"></div>
+                                        
+                                    </section>
+                                    
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+                            <p><b style="color: #ffffff;">Road Crashes Victoria</b> is an INFO20002 Project</p>
+                            <p>Created by Aiden Hussein, Bun Hagiwara, Nicholas Pitson</p>
+							<ul class="copyright">
+                                <li>University of Melbourne <a href="https://handbook.unimelb.edu.au/view/2016/INFO20002">INFO2002</a> Group Project 2016</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>All data correct at time of publication</li><li><a href="credits">Credits</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/skel.min.js"></script>
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/util.js"></script>
+            <script src="/static/js/highcharts.js"></script>
+            <script src="/static/js/appear.js"></script>
+			<!--[if lte IE 8]><script src="static/js/ie/respond.min.js"></script><![endif]-->
+			<script src="static/js/main.js"></script>
+    
+    <!-- HighCharts Functions -->
+            <script type="text/javascript">
+            // HighCharts Animate When Chart in Viewport
+            // Code By: Torstein Hønsi 
+            // URL: http://jsfiddle.net/highcharts/8YVUb/    
+            (function(H) {
+                function deferRender(proceed) {
+                    var series = this,
+                        $renderTo = $(this.chart.container.parentNode);
+
+                    // It is appeared, render it
+                    if ($renderTo.is(':appeared') || !series.options.animation) {
+                        proceed.call(series);
+
+                        // It is not appeared, halt renering until appear
+                    } else {
+                        $renderTo.appear(); // Initialize appear plugin
+                        $renderTo.on('appear', function() {
+                            proceed.call(series);
+                        });
+                    }
+                };
+
+                H.wrap(H.Series.prototype, 'render', deferRender);
+
+            }(Highcharts));
+            </script>
+            <script type="text/javascript">{{chart1_js|safe}}</script>
+            <script type="text/javascript">{{chart2_js|safe}}</script>
+            <script type="text/javascript">{{chart3_js|safe}}</script>
+            <script type="text/javascript">{{chart4_js|safe}}</script>
+            <script type="text/javascript">{{chart5_js|safe}}</script>
+	</body>
+</html>

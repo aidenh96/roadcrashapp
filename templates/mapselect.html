@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net
+    Modified By Aiden Hussein
+-->
+<html>
+	<head>
+		<title>Road Crashes Victoria | Map Selector</title>
+		<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico?v=2" />
+		
+        <!-- Meta -->
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/static/js/ie/html5shiv.js"></script><![endif]-->
+		
+        <!-- CSS Styles -->
+        <link rel="stylesheet" href="/static/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="/static/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/static/css/ie8.css" /><![endif]-->
+	</head>
+	
+    <body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="/">Road Crashes Victoria</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+							    <li><a href="/">Home</a></li>
+								<li><a href="data">Data</a></li>
+								<li><a href="pivotselect">Pivot Table</a></li>
+								<li><a href="charts">Observations</a></li>
+                                <li><a href="mapselect">Map</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Map Generator</h2>
+								<p>Why not view all this data in a pretty map?</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<section>
+										<h3 class="major">Build Your Map</h3>
+                                        <form name="map_select" action="/map" method="GET">
+                                            <div class="row uniform">
+                                                  <div class="4u 12u$(small)">
+                                                    <label>Choose Aggregation:</label>
+                                                    <div class="select-wrapper">
+                                                        <select name="aggType">
+                                                            <option selected disabled hidden>Select...</option>
+                                                            <option value="total">Total Count Of</option>
+                                                            <option value="percent">Percentage Of</option>
+                                                        </select>
+                                                      </div>
+                                                </div>
+                                                
+                                                <div class="8u 12u$(small)">
+                                                    <label>Choose map attribute:</label>
+                                                    <div class="select-wrapper">
+                                                        <select name="dataAttr">
+                                                            <option selected disabled hidden>Select...</option>
+                                                            <option value="1">All Crashes</option>
+                                                            <option value="2">Hit and Runs</option>
+                                                            <option value="3">Persons Involved in a Crash</option>
+                                                            <option value="4">Fatalities</option>
+                                                            <option value="5">Injuries</option>
+                                                            <option value="6">Males Involved in a Crash</option>
+                                                            <option value="7">Females Involved in a Crash</option>
+                                                            <option value="8">Old Drivers Involved in a Crash</option>
+                                                            <option value="9">Young Drivers Involved in a Crash</option>
+                                                            <option value="10">Alcohol Related Car Crashes</option>
+                                                        </select>
+                                                    </div>
+                                                </div>    
+                                              
+                                                <div class="12u$">
+                                                    <label>Which year/s:</label>
+                                                </div>
+                                                <div class="6u$(small)">
+                                                    <input type="radio" name="yearRange" value="yrSingle" id="yrSingle">
+                                                    <label for="yrSingle">Choose a single year</label>
+                                                </div>
+                                                <div class="6u$(small)">
+                                                    <input type="radio" name="yearRange" value="yrMulti" id="yrMulti">
+                                                    <label for="yrMulti">Choose a range of years</label>
+                                                </div>
+
+
+                                                <div id="yrSingleSelect" class="12u$">
+                                                    <label for="yearAttr">Choose a single year</label>
+                                                    <div class="select-wrapper">
+                                                        <select class="yrSingleInput" name="yearAttr">
+                                                            <option selected disabled hidden>Select...</option>
+                                                            <option value="2010">2010</option>
+                                                            <option value="2011">2011</option>
+                                                            <option value="2012">2012</option>
+                                                            <option value="2013">2013</option>
+                                                            <option value="2014">2014</option>
+                                                            <option value="2015">2015</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="6u 12u$(small) yrMultiSelect">
+                                                    <label for="yRange1">Beginning Year</label>
+                                                    <div class="select-wrapper">
+                                                        <select class="yrMultiInput in1" name="yRange1">
+                                                            <option selected disabled hidden>Select...</option>
+                                                            <option value="2010">2010</option>
+                                                            <option value="2011">2011</option>
+                                                            <option value="2012">2012</option>
+                                                            <option value="2013">2013</option>
+                                                            <option value="2014">2014</option>
+                                                        </select>
+                                                    </div>
+                                                </div>    
+                                                    
+                                                
+                                                <div class="6u 12u$(small) yrMultiSelect">
+                                                    <label for="yRange2">End Year</label>
+                                                    <div class="select-wrapper">
+                                                        <select class="yrMultiInput in2" name="yRange2">
+                                                            <option selected disabled hidden>Select...</option>
+                                                            <option value="2011">2011</option>
+                                                            <option value="2012">2012</option>
+                                                            <option value="2013">2013</option>
+                                                            <option value="2014">2014</option>
+                                                            <option value="2015">2015</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="12u$">
+                                                    <ul class="actions">
+                                                        <li>
+                                                            <input type="submit" value="Generate Map" class="special" />
+                                                        </li>
+                                                        <li>
+                                                            <input type="reset" id="mapReset" value="Reset" />
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </section>
+                                    
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+                            <p><b style="color: #ffffff;">Road Crashes Victoria</b> is an INFO20002 Project</p>
+                            <p>Created by Aiden Hussein, Bun Hagiwara, Nicholas Pitson</p>
+							<ul class="copyright">
+                                <li>University of Melbourne <a href="https://handbook.unimelb.edu.au/view/2016/INFO20002">INFO2002</a> Group Project 2016</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>All data correct at time of publication</li><li><a href="credits">Credits</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/skel.min.js"></script>
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<!--[if lte IE 8]><script src="static/js/ie/respond.min.js"></script><![endif]-->
+			<script src="static/js/main.js"></script>
+        
+        <!-- Map Functions -->
+            <script src="static/js/mapForm.js"></script>
+	</body>
+</html>
